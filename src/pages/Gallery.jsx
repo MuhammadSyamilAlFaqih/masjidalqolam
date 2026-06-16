@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const years = [
   { label: "Kajian", path: "kajian", icon: "", img: "/gallery/kajian.jpeg" },
@@ -9,7 +10,7 @@ const years = [
   { label: "Hari Besar Islam", path: "hari-besar", icon: "", img: "/gallery/ied.JPG" },
   { label: "Kegiatan Pemuda", path: "pemuda", icon: "", img: "/gallery/remaja.jpeg" },
 ];
-
+const [selectedImage, setSelectedImage] = useState(null);
 const Gallery = () => {
   return (
     <div className="relative flex flex-col min-h-screen bg-white overflow-hidden">
@@ -40,7 +41,10 @@ const Gallery = () => {
       {/* Grid Card */}
       <div className="relative grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 px-4 md:px-6 pb-12 md:pb-16 max-w-4xl mx-auto w-full">
         {years.map((item) => (
-          <Link key={item.label} to={`/gallery-${item.path}`}>
+<div
+  key={item.label}
+  onClick={() => setSelectedImage(item)}
+>
             <div className="group relative h-32 md:h-56 rounded-xl md:rounded-2xl overflow-hidden shadow-md cursor-pointer">
 
               {/* Gambar thumbnail */}
@@ -61,7 +65,35 @@ const Gallery = () => {
               </div>
 
             </div>
-          </Link>
+            {selectedImage && (
+  <div
+    className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+    onClick={() => setSelectedImage(null)}
+  >
+    <div
+      className="relative max-w-6xl w-full"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        onClick={() => setSelectedImage(null)}
+        className="absolute -top-12 right-0 text-white text-4xl"
+      >
+        ×
+      </button>
+
+      <img
+        src={selectedImage.img}
+        alt={selectedImage.label}
+        className="w-full max-h-[85vh] object-contain rounded-xl"
+      />
+
+      <h2 className="text-white text-center text-2xl font-bold mt-4">
+        {selectedImage.label}
+      </h2>
+    </div>
+  </div>
+)}
+        </div>
         ))}
       </div>
 
