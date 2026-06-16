@@ -5,7 +5,7 @@ const photos = [
   "/gallery/ramadan/foto1.jpeg",
 ];
 
-const GalleryResq = () => {
+const GalleryJumber = () => {
   const navigate = useNavigate();
   const [lightbox, setLightbox] = useState(null);
 
@@ -84,4 +84,4 @@ const GalleryResq = () => {
   );
 };
 
-export default GalleryResq;
+export default GalleryJumber;

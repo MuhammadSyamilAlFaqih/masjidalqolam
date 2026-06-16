@@ -6,15 +6,16 @@ import About from './pages/About';
 import Jadwal from './pages/Jadwal';
 import Gallery from './pages/Gallery';
 import Kegiatan from './pages/Kegiatan';
-import GalleryResq from './pages/Gallery/GalleryResq';
 import Contact from './pages/Contact';
-import Gallery2019 from './pages/Gallery/Gallery2019';
-import Gallery2022 from './pages/Gallery/Gallery2022';
-import Gallery2023 from './pages/Gallery/Gallery2023';
-import Gallery2024 from './pages/Gallery/Gallery2024';
-import Gallery2025 from './pages/Gallery/Gallery2025';
+import GalleryResq from './pages/Gallery/GalleryResq';
+import GalleryRamadhan from './pages/Gallery/Galleryramadhan';
+import GalleryJumber from './pages/Gallery/Galleryjumber';
+import GallerySosial from './pages/Gallery/Gallerysosial';
+import GalleryPemuda from './pages/Gallery/Gallerypemuda';
+import GalleryEvent from './pages/Gallery/Galleryevent';
+import GalleryKajian from './pages/Gallery/Gallerykajian';
 import Sejarah from './pages/Sejarah';
-import GalleryDetail from './pages/GalleryDetail';
+
 
 
 const App = () => {
@@ -30,13 +31,13 @@ const App = () => {
       <Route path='/jadwal' element={<Jadwal />}></Route>
       <Route path='/gallery' element={<Gallery />}></Route>
       <Route path='/sejarah' element={<Sejarah />}></Route>
-      <Route path='/gallery-kajian' element={<GalleryResq />}></Route>
-      <Route path='/gallery-2019' element={<Gallery2019 />}></Route>
-      <Route path='/gallery-2022' element={<Gallery2022 />}></Route>
-      <Route path='/gallery-2023' element={<Gallery2023 />}></Route>
-      <Route path='/gallery-2024' element={<Gallery2024 />}></Route>
-      <Route path='/gallery-2025' element={<Gallery2025 />}></Route>
-      <Route path="/gallery-:slug" element={<GalleryDetail />} />
+      <Route path='/gallery-kajian' element={<GalleryKajian />}></Route>
+      <Route path='/gallery-ramadhan' element={<GalleryRamadhan />}></Route>
+      <Route path='/gallery-jumat-berkah' element={<GalleryJumber />}></Route>
+      <Route path='/gallery-sosial' element={<GallerySosial />}></Route>
+      <Route path='/gallery-hari-besar' element={<GalleryEvent />}></Route>
+      <Route path='/gallery-pemuda' element={<GalleryPemuda />}></Route>
+    
       </Routes>
     </Layout>
     </BrowserRouter>

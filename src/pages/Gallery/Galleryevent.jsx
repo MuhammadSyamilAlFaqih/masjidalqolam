@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -5,7 +6,7 @@ const photos = [
   "/gallery/ramadan/foto1.jpeg",
 ];
 
-const GalleryResq = () => {
+const GalleryEvent = () => {
   const navigate = useNavigate();
   const [lightbox, setLightbox] = useState(null);
 
@@ -84,4 +85,4 @@ const GalleryResq = () => {
   );
 };
 
-export default GalleryResq;
+export default GalleryEvent;
