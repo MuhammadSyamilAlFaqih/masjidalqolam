@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
       {/* Background Image */}
       <img
-        src="/public/cntc.JPG"
+        src="/cntc.JPG"
         alt="Masjid Background"
         className="absolute inset-0 w-full h-full object-cover"
       />

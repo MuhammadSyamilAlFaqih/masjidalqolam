@@ -41,14 +41,14 @@ const JadwalSholat = () => {
   }, []);
 
   const items = [
-    { label: "Imsak", value: jadwalHariIni?.imsak, icon: "/public/icon/night.png", size: "w-8 h-8" },
-    { label: "Subuh", value: jadwalHariIni?.subuh, icon: "/public/icon/moonset.png", size: "w-10 h-10" },
-    { label: "Terbit", value: jadwalHariIni?.terbit, icon: "/public/icon/sunrise.png", size: "w-10 h-10" },
-    { label: "Dzuhur", value: jadwalHariIni?.dzuhur, icon: "/public/icon/sun.png", size: "w-10 h-10" },
-    { label: "Ashar", value: jadwalHariIni?.ashar, icon: "/public/icon/sunset.png", size: "w-10 h-10" },
-    { label: "Maghrib", value: jadwalHariIni?.maghrib, icon: "/public/icon/moon.png", size: "w-10 h-10" },
-    { label: "Isya", value: jadwalHariIni?.isya, icon: "/public/icon/moon (1).png", size: "w-9 h-9" },
-  ];
+  { label: "Imsak", value: jadwalHariIni?.imsak, icon: "/icon/night.png", size: "w-8 h-8" },
+  { label: "Subuh", value: jadwalHariIni?.subuh, icon: "/icon/moonset.png", size: "w-10 h-10" },
+  { label: "Terbit", value: jadwalHariIni?.terbit, icon: "/icon/sunrise.png", size: "w-10 h-10" },
+  { label: "Dzuhur", value: jadwalHariIni?.dzuhur, icon: "/icon/sun.png", size: "w-10 h-10" },
+  { label: "Ashar", value: jadwalHariIni?.ashar, icon: "/icon/sunset.png", size: "w-10 h-10" },
+  { label: "Maghrib", value: jadwalHariIni?.maghrib, icon: "/icon/moon.png", size: "w-10 h-10" },
+  { label: "Isya", value: jadwalHariIni?.isya, icon: "/icon/moonn.png", size: "w-9 h-9" },
+];
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gray-50 p-4 overflow-hidden">

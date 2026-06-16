@@ -55,7 +55,7 @@ const Sejarah = () => {
           {/* Paragraf 2 */}
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
             <img
-              src="/public/gallery/sjrh.JPG"
+              src="/gallery/sjrh.JPG"
               alt="Kegiatan Masjid"
               className="w-full md:w-1/2 h-64 object-cover rounded-2xl shadow-md shrink-0"
             />

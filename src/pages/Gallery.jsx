@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const years = [
-  { label: "Kajian", path: "kajian", icon: "", img: "/public/gallery/kajian.jpeg" },
-  { label: "Jumat Berkah", path: "jumat-berkah", icon: "", img: "/public/gallery/jumber.jpeg" },
-  { label: "Ramadhan", path: "ramadhan", icon: "", img: "/public/gallery/WhatsApp Image 2026-06-16 at 15.00.29.jpeg" },
-  { label: "Sosial", path: "sosial", icon: "", img: "/public/gallery/WNA08327.JPG" },
-  { label: "Hari Besar Islam", path: "hari-besar", icon: "", img: "/public/gallery/ied.JPG" },
-  { label: "Kegiatan Pemuda", path: "pemuda", icon: "", img: "/public/gallery/remaja.jpeg" },
+  { label: "Kajian", path: "kajian", icon: "", img: "/gallery/kajian.jpeg" },
+  { label: "Jumat Berkah", path: "jumat-berkah", icon: "", img: "/gallery/jumber.jpeg" },
+  { label: "Ramadhan", path: "ramadhan", icon: "", img: "/gallery/ramadan.jpeg" },
+  { label: "Sosial", path: "sosial", icon: "", img: "/gallery/WNA08327.JPG" },
+  { label: "Hari Besar Islam", path: "hari-besar", icon: "", img: "/gallery/ied.JPG" },
+  { label: "Kegiatan Pemuda", path: "pemuda", icon: "", img: "/gallery/remaja.jpeg" },
 ];
 
 const Gallery = () => {
