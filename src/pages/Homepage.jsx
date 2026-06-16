@@ -20,7 +20,7 @@ const Homepage = () => {
     Masjid Al Qolam
   </h1>
   <p className="text-xl max-w-2xl">
-    Rumah singgah jiwa yang rindu ketenangan —
+    Rumah singgah jiwa yang rindu ketenangan, 
     terbuka untuk semua, setiap saat.
   </p>
 </div>

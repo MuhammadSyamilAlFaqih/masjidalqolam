@@ -42,23 +42,23 @@ const kegiatan = [
 
 const Kegiatan = () => {
   return (
-    <div className="relative min-h-screen bg-[#fdf6ec] overflow-hidden px-6 py-16">
+    <div className="relative min-h-screen bg-[#fdf6ec] overflow-hidden px-4 md:px-6 pt-28 md:pt-32 pb-16">
 
       {/* Ornamen */}
       <img
-        className="absolute bottom-10 left-0 h-80 w-80 opacity-30 pointer-events-none"
+        className="absolute bottom-10 left-0 h-48 md:h-80 w-48 md:w-80 opacity-30 pointer-events-none"
         src="/ornamen/bunga9.png"
         alt=""
       />
       <img
-        className="absolute bottom-10 right-0 h-80 w-80 opacity-30 pointer-events-none"
+        className="absolute bottom-10 right-0 h-48 md:h-80 w-48 md:w-80 opacity-30 pointer-events-none"
         src="/ornamen/bunga9.png"
         alt=""
       />
 
       {/* Judul */}
       <div className="relative text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-gray-900 font-[merriweather]">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-[merriweather]">
           Agenda Masjid
         </h1>
         <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>

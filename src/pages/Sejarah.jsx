@@ -2,24 +2,20 @@ import React from 'react';
 
 const Sejarah = () => {
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section className="pt-28 md:pt-32 pb-16 px-4 md:px-6 bg-gray-50">
 
-  
-   
-
-      
       <div className="max-w-4xl mx-auto">
 
         {/* Judul */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 font-[merriweather] mb-3">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-[merriweather] mb-3">
             Sejarah Masjid Al Qolam
           </h2>
           <div className="w-16 h-1 bg-orange-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Konten utama */}
-        <div className="flex flex-col gap-10 text-gray-700 text-lg leading-relaxed">
+        <div className="flex flex-col gap-10 text-gray-700 text-base md:text-lg leading-relaxed">
 
           {/* Paragraf 1 */}
           <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -115,7 +111,7 @@ const Sejarah = () => {
             ].map((item, index) => (
               <div key={index} className="flex gap-4 items-start">
                 <div className="flex flex-col items-center">
-                  <div className="w-18 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold shrink-0 px-2">
+                  <div className="w-20 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold shrink-0 px-2">
                     {item.tahun}
                   </div>
                   {index < 5 && <div className="w-0.5 h-full bg-orange-200 mt-1"></div>}

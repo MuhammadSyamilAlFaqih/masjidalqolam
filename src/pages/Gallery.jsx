@@ -16,32 +16,32 @@ const Gallery = () => {
 
       {/* Ornamen */}
       <img
-        className="absolute top-0 left-0 h-3/5 opacity-40 pointer-events-none"
+        className="absolute top-0 left-0 h-40 md:h-3/5 opacity-40 pointer-events-none"
         src="/ornamen/bunga2q.png"
         alt=""
       />
       <img
-        className="absolute bottom-0 right-0 h-3/5 opacity-40 pointer-events-none"
+        className="absolute bottom-0 right-0 h-40 md:h-3/5 opacity-40 pointer-events-none"
         src="/ornamen/bunga2.png"
         alt=""
       />
 
       {/* Judul */}
-      <div className="relative text-center mt-14 mb-10 px-4">
-        <h1 className="text-4xl font-extrabold text-gray-900 font-[merriweather]">
+      <div className="relative text-center pt-28 md:pt-32 mb-8 md:mb-10 px-4">
+        <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 font-[merriweather]">
           Galeri Kegiatan
         </h1>
         <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>
-        <p className="text-gray-500 mt-3 text-m">
+        <p className="text-gray-500 mt-3 text-sm md:text-base">
           Dokumentasi perjalanan dan kegiatan Masjid Al Qolam
         </p>
       </div>
 
       {/* Grid Card */}
-      <div className="relative grid grid-cols-2 md:grid-cols-3 gap-5 px-6 pb-16 max-w-4xl mx-auto w-full">
+      <div className="relative grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 px-4 md:px-6 pb-12 md:pb-16 max-w-4xl mx-auto w-full">
         {years.map((item) => (
           <Link key={item.label} to={`/gallery-${item.path}`}>
-            <div className="group relative h-48 md:h-56 rounded-2xl overflow-hidden shadow-md cursor-pointer">
+            <div className="group relative h-32 md:h-56 rounded-xl md:rounded-2xl overflow-hidden shadow-md cursor-pointer">
 
               {/* Gambar thumbnail */}
               <img
@@ -55,7 +55,7 @@ const Gallery = () => {
 
               {/* Label */}
               <div className="absolute inset-0 flex items-center justify-center px-2">
-                <span className="text-white text-lg md:text-2xl font-bold tracking-wide drop-shadow-lg text-center">
+                <span className="text-white text-sm md:text-2xl font-bold tracking-wide drop-shadow-lg text-center">
                   {item.icon} {item.label}
                 </span>
               </div>

@@ -3,8 +3,9 @@ import { FaWhatsapp, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-      {/* Background Image */}
+    <div className="relative flex items-center justify-center min-h-screen px-4 py-12 text-white overflow-hidden">
+      
+      {/* Background */}
       <img
         src="/cntc.JPG"
         alt="Masjid Background"
@@ -12,57 +13,88 @@ const Contact = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Konten */}
-      <div className="relative z-10 text-center -translate-y-32">
-        <h2 className="text-4xl font-bold mb-8">Hubungi Kami</h2>
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-6xl text-center">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
+        <h2 className="text-3xl md:text-5xl font-bold mb-3">
+          Hubungi Kami
+        </h2>
+
+        <p className="text-sm md:text-lg text-gray-200 mb-10">
+          Silakan hubungi kami untuk informasi kegiatan, kajian, maupun
+          program Masjid Al Qolam.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
           {/* WhatsApp */}
-          <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-xl p-6 flex flex-col items-center">
-            <FaWhatsapp className="text-green-400 text-5xl mb-3" />
-            <h3 className="text-xl font-semibold">WhatsApp</h3>
-            <p>Ketua DKM Masjid Al Qolam</p>
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:bg-white/25 transition">
+            <FaWhatsapp className="text-green-400 text-4xl md:text-5xl mx-auto mb-4" />
+
+            <h3 className="text-lg md:text-xl font-semibold mb-2">
+              WhatsApp
+            </h3>
+
+            <p className="text-sm md:text-base text-gray-200">
+              Ketua DKM Masjid Al Qolam
+            </p>
+
             <a
               href="https://wa.me/6281234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-300 font-medium mt-2"
+              className="inline-block mt-4 text-green-300 font-semibold hover:text-green-200"
             >
-              Chat Sekarang
+              Chat Sekarang →
             </a>
           </div>
 
           {/* Instagram */}
-          <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-xl p-6 flex flex-col items-center">
-            <FaInstagram className="text-pink-400 text-5xl mb-3" />
-            <h3 className="text-xl font-semibold">Instagram</h3>
-            <p>Follow kami di Instagram</p>
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:bg-white/25 transition">
+            <FaInstagram className="text-pink-400 text-4xl md:text-5xl mx-auto mb-4" />
+
+            <h3 className="text-lg md:text-xl font-semibold mb-2">
+              Instagram
+            </h3>
+
+            <p className="text-sm md:text-base text-gray-200">
+              Dokumentasi kegiatan dan informasi terbaru
+            </p>
+
             <a
               href="https://instagram.com/resq_iqro"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-pink-300 font-medium mt-2"
+              className="inline-block mt-4 text-pink-300 font-semibold hover:text-pink-200"
             >
-              @RESQ AL Qolam
+              @resq_iqro →
             </a>
           </div>
 
           {/* YouTube */}
-          <div className="bg-white bg-opacity-20 backdrop-blur-md shadow-lg rounded-xl p-6 flex flex-col items-center">
-            <FaYoutube className="text-red-400 text-5xl mb-3" />
-            <h3 className="text-xl font-semibold">YouTube</h3>
-            <p>Tonton video kajian kami</p>
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:bg-white/25 transition">
+            <FaYoutube className="text-red-400 text-4xl md:text-5xl mx-auto mb-4" />
+
+            <h3 className="text-lg md:text-xl font-semibold mb-2">
+              YouTube
+            </h3>
+
+            <p className="text-sm md:text-base text-gray-200">
+              Kajian, dokumentasi, dan konten dakwah
+            </p>
+
             <a
               href="https://www.youtube.com/@iqrotv7919"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-red-300 font-medium mt-2"
+              className="inline-block mt-4 text-red-300 font-semibold hover:text-red-200"
             >
-              Masjid Al Qolam
+              Kunjungi Channel →
             </a>
           </div>
+
         </div>
       </div>
     </div>

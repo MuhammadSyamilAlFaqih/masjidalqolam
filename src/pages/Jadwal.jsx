@@ -41,45 +41,45 @@ const JadwalSholat = () => {
   }, []);
 
   const items = [
-  { label: "Imsak", value: jadwalHariIni?.imsak, icon: "/icon/night.png", size: "w-8 h-8" },
-  { label: "Subuh", value: jadwalHariIni?.subuh, icon: "/icon/moonset.png", size: "w-10 h-10" },
-  { label: "Terbit", value: jadwalHariIni?.terbit, icon: "/icon/sunrise.png", size: "w-10 h-10" },
-  { label: "Dzuhur", value: jadwalHariIni?.dzuhur, icon: "/icon/sun.png", size: "w-10 h-10" },
-  { label: "Ashar", value: jadwalHariIni?.ashar, icon: "/icon/sunset.png", size: "w-10 h-10" },
-  { label: "Maghrib", value: jadwalHariIni?.maghrib, icon: "/icon/moon.png", size: "w-10 h-10" },
-  { label: "Isya", value: jadwalHariIni?.isya, icon: "/icon/moonn.png", size: "w-9 h-9" },
-];
+    { label: "Imsak", value: jadwalHariIni?.imsak, icon: "/icon/night.png", size: "w-7 h-7 md:w-8 md:h-8" },
+    { label: "Subuh", value: jadwalHariIni?.subuh, icon: "/icon/moonset.png", size: "w-8 h-8 md:w-10 md:h-10" },
+    { label: "Terbit", value: jadwalHariIni?.terbit, icon: "/icon/sunrise.png", size: "w-8 h-8 md:w-10 md:h-10" },
+    { label: "Dzuhur", value: jadwalHariIni?.dzuhur, icon: "/icon/sun.png", size: "w-8 h-8 md:w-10 md:h-10" },
+    { label: "Ashar", value: jadwalHariIni?.ashar, icon: "/icon/sunset.png", size: "w-8 h-8 md:w-10 md:h-10" },
+    { label: "Maghrib", value: jadwalHariIni?.maghrib, icon: "/icon/moon.png", size: "w-8 h-8 md:w-10 md:h-10" },
+    { label: "Isya", value: jadwalHariIni?.isya, icon: "/icon/moonn.png", size: "w-7 h-7 md:w-9 md:h-9" },
+  ];
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gray-50 p-4 overflow-hidden">
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-50 px-4 pt-28 md:pt-8 pb-8 overflow-hidden">
       {/* Ornamen */}
       <img
-        className="absolute top-0 left-0 h-3/5 opacity-40 pointer-events-none"
+        className="absolute top-0 left-0 h-40 md:h-3/5 opacity-40 pointer-events-none"
         src="/ornamen/bunga2q.png"
         alt=""
       />
       <img
-        className="absolute bottom-0 right-0 h-3/5 opacity-40 pointer-events-none"
+        className="absolute bottom-0 right-0 h-40 md:h-3/5 opacity-40 pointer-events-none"
         src="/ornamen/bunga2.png"
         alt=""
       />
 
       {jadwalHariIni ? (
         <motion.div
-          className="relative z-10 bg-white p-10 rounded-2xl shadow-xl border w-[500px]"
+          className="relative z-10 bg-white p-6 md:p-10 rounded-2xl shadow-xl border w-full max-w-md md:w-[500px]"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl text-gray-900 font-bold text-center mb-6">
+          <h1 className="text-xl md:text-2xl text-gray-900 font-bold text-center mb-4 md:mb-6">
             Jadwal Sholat Hari Ini
           </h1>
 
-          <p className="text-center text-gray-500 mb-6">
+          <p className="text-center text-gray-500 text-sm md:text-base mb-4 md:mb-6">
             {jadwalHariIni.hari}, {jadwalHariIni.tanggal_lengkap}
           </p>
 
-          <ul className="space-y-4 text-gray-800 text-lg">
+          <ul className="space-y-3 md:space-y-4 text-gray-800 text-base md:text-lg">
             {items.map((item) => (
               <li key={item.label} className="flex items-center gap-3">
                 <img src={item.icon} alt={item.label} className={item.size} />
