@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const photos = [
-  "/gallery/ramadan/foto1.jpeg",
+  "/gallery/ramadan.jpeg",
 ];
 
 const GalleryRamadhan = () => {
