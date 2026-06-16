@@ -1,37 +1,72 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const years = ["RESQ", "2019", "2022", "2023", "2024", "2025"];
+const years = [
+  { label: "Kajian", path: "kajian", icon: "", img: "/public/gallery/kajian.jpeg" },
+  { label: "Jumat Berkah", path: "jumat-berkah", icon: "", img: "/public/gallery/jumber.jpeg" },
+  { label: "Ramadhan", path: "ramadhan", icon: "", img: "/public/gallery/WhatsApp Image 2026-06-16 at 15.00.29.jpeg" },
+  { label: "Sosial", path: "sosial", icon: "", img: "/public/gallery/WNA08327.JPG" },
+  { label: "Hari Besar Islam", path: "hari-besar", icon: "", img: "/public/gallery/ied.JPG" },
+  { label: "Kegiatan Pemuda", path: "pemuda", icon: "", img: "/public/gallery/remaja.jpeg" },
+];
 
 const Gallery = () => {
   return (
-    <div className="relative flex flex-col min-h-screen bg-beige">
-      {/* Ornamen Kiri Atas */}
-      <img 
-        className="absolute top-0 left-0 h-3/5" 
-        src="/src/assets/ornamen/bunga2q.png" 
-        alt="Ornamen Kiri" 
+    <div className="relative flex flex-col min-h-screen bg-white overflow-hidden">
+
+      {/* Ornamen */}
+      <img
+        className="absolute top-0 left-0 h-3/5 opacity-40 pointer-events-none"
+        src="/ornamen/bunga2q.png"
+        alt=""
+      />
+      <img
+        className="absolute bottom-0 right-0 h-3/5 opacity-40 pointer-events-none"
+        src="/ornamen/bunga2.png"
+        alt=""
       />
 
-      {/* Ornamen Kanan Bawah */}
-      <img 
-        className="absolute bottom-0 right-0 h-3/5" 
-        src="/src/assets/ornamen/bunga2.png" 
-        alt="Ornamen Kanan" 
-      />
+      {/* Judul */}
+      <div className="relative text-center mt-14 mb-10 px-4">
+        <h1 className="text-4xl font-extrabold text-gray-900 font-[merriweather]">
+          Galeri Kegiatan
+        </h1>
+        <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>
+        <p className="text-gray-500 mt-3 text-m">
+          Dokumentasi perjalanan dan kegiatan Masjid Al Qolam
+        </p>
+      </div>
 
-      {/* Konten Gallery */}
-      <div className="relative flex flex-col items-center justify-center mt-10 animate-fadeIn">
-        {years.map((year, index) => (
-          <Link key={year} to={`/gallery-${year.toLowerCase()}`} className="w-full max-w-sm">
-            <div className={`mx-auto flex items-center justify-center text-white text-lg font-semibold gap-x-4 rounded-xl bg-orange-900 p-6 shadow-lg transition-transform duration-300 hover:scale-105 ${index !== 0 ? "mt-5" : ""}`}>
-              {year}
+      {/* Grid Card */}
+      <div className="relative grid grid-cols-2 md:grid-cols-3 gap-5 px-6 pb-16 max-w-4xl mx-auto w-full">
+        {years.map((item) => (
+          <Link key={item.label} to={`/gallery-${item.path}`}>
+            <div className="group relative h-48 md:h-56 rounded-2xl overflow-hidden shadow-md cursor-pointer">
+
+              {/* Gambar thumbnail */}
+              <img
+                src={item.img}
+                alt={item.label}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+
+              {/* Overlay gelap */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300"></div>
+
+              {/* Label */}
+              <div className="absolute inset-0 flex items-center justify-center px-2">
+                <span className="text-white text-lg md:text-2xl font-bold tracking-wide drop-shadow-lg text-center">
+                  {item.icon} {item.label}
+                </span>
+              </div>
+
             </div>
           </Link>
         ))}
       </div>
+
     </div>
   );
-}
+};
 
 export default Gallery;

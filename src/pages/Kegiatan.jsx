@@ -1,54 +1,104 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const kegiatan = [
+  {
+    label: "Jumat Berkah",
+    path: "/gallery-resq",
+    img: "/public/icon/restaurant.png",
+    desc: "Berbagi kebaikan setiap Jumat bersama jamaah dan warga sekitar. #jumatmustahillapar",
+  },
+  {
+    label: "Ramadhan",
+    path: "/gallery-2019",
+    img: "/public/icon/ketupat.png",
+    desc: "Rangkaian ibadah dan kegiatan spesial sepanjang bulan suci.",
+  },
+  {
+    label: "Kajian Subuh",
+    path: "/gallery-2022",
+     img: "/public/icon/conference.png",
+    desc: "Menimba ilmu di hari sabtu dan minggu pagi dengan tema-tema yang komprehensif.",
+  },
+  {
+    label: "Kajian Kemuslimahan",
+    path: "/gallery-2023",
+    img: "/public/icon/muslim.png",
+    desc: "Ruang belajar dan berbagi khusus untuk muslimah.",
+  },
+  {
+    label: "Masjid Berbagi",
+    path: "/gallery-2024",
+    img: "/public/icon/charity.png",
+    desc: "Program berbagi dan pembinaan  sosial untuk masyarakat sekitar .",
+  },
+  {
+    label: "Kemerdekaan",
+    path: "/gallery-2025",
+    img: "/public/icon/indonesia.png",
+    desc: "Merayakan HUT RI dengan semangat kebersamaan dan pancasila.",
+  },
+];
+
 const Kegiatan = () => {
   return (
-    <div className="relative min-h-screen flex justify-center items-center ">
-      {/* Gambar menyebar */}
-      <img className="absolute bottom-10 left-16 h-80 w-80" src="/src/assets/ornamen/bunga9.png" alt="" />
-      <img className="absolute bottom-20 right-20 h-80 w-80" src="/src/assets/ornamen/bunga10.png" alt="" />
-     
+    <div className="relative min-h-screen bg-[#fdf6ec] overflow-hidden px-6 py-16">
 
-      {/* Kontainer Teks */}
-      <div className="flex flex-col space-y-5 text-center">
-        <Link to="/gallery-resq">
-          <div className="max-w-sm mx-auto text-white text-center rounded-xl bg-orange-900 p-5 shadow-lg transition-transform duration-300 hover:scale-[1.1]">
-            Jumat Berkah
-          </div>
-        </Link>
+      {/* Ornamen */}
+      <img
+        className="absolute bottom-10 left-0 h-80 w-80 opacity-30 pointer-events-none"
+        src="/src/assets/ornamen/bunga9.png"
+        alt=""
+      />
+      <img
+        className="absolute bottom-10 right-0 h-80 w-80 opacity-30 pointer-events-none"
+        src="/src/assets/ornamen/bunga9.png"
+        alt=""
+      />
 
-        <Link to="/gallery-2019">
-          <div className="max-w-sm mx-auto text-white text-center rounded-xl bg-orange-900 p-5 shadow-lg transition-transform duration-300 hover:scale-[1.1]">
-            Ramadhan
-          </div>
-        </Link>
-
-        <Link to="/gallery-2022">
-          <div className="max-w-sm mx-auto text-white text-center rounded-xl bg-orange-900 p-5 shadow-lg transition-transform duration-300 hover:scale-[1.1]">
-            Kajian Subuh
-          </div>
-        </Link>
-
-        <Link to="/gallery-2023">
-          <div className="max-w-sm mx-auto text-white text-center rounded-xl bg-orange-900 p-5 shadow-lg transition-transform duration-300 hover:scale-[1.1]">
-            Kajian Kemuslimahan
-          </div>
-        </Link>
-
-        <Link to="/gallery-2024">
-          <div className="max-w-sm mx-auto text-white text-center rounded-xl bg-orange-900 p-5 shadow-lg transition-transform duration-300 hover:scale-[1.1]">
-            Masjid Berbagi
-          </div>
-        </Link>
-
-        <Link to="/gallery-2025">
-          <div className="max-w-sm mx-auto text-white text-center rounded-xl bg-orange-900 p-5 shadow-lg transition-transform duration-300 hover:scale-[1.1]">
-            Kemerdekaan
-          </div>
-        </Link>
+      {/* Judul */}
+      <div className="relative text-center mb-12">
+        <h1 className="text-4xl font-extrabold text-gray-900 font-[merriweather]">
+          Agenda Masjid
+        </h1>
+        <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>
+        <p className="text-gray-500 mt-3 text-sm">
+          Berbagai program rutin Masjid Al Qolam
+        </p>
       </div>
+
+      {/* Grid Card */}
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {kegiatan.map((item) => (
+          <Link key={item.label} to={item.path}>
+            <div className="group bg-white rounded-2xl shadow-md p-6 flex flex-col gap-3 border border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+
+       {/* Ikon */}
+<div className="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center overflow-hidden">
+  <img src={item.img} alt={item.label} className="w-10 h-10 object-contain" />
+</div>
+              {/* Label */}
+              <h3 className="text-gray-900 font-bold text-lg group-hover:text-orange-700 transition-colors duration-200">
+                {item.label}
+              </h3>
+
+              {/* Deskripsi */}
+              <p className="text-gray-500 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+
+              {/* Lihat selengkapnya */}
+              <span className="mt-auto text-orange-600 text-sm font-semibold group-hover:underline">
+                Lihat galeri →
+              </span>
+
+            </div>
+          </Link>
+        ))}
+      </div>
+
     </div>
   );
-}
+};
 
 export default Kegiatan;

@@ -1,10 +1,14 @@
 import React from 'react';
-
+import masjid from "../../public/masjid.jpg"
+import JadwalSholat from './Jadwal';
 const Homepage = () => {
   return (
+    
+ 
+
     <div className="relative h-screen">
   <img
-    src="../../public/Desain tanpa judul.jpg"
+    src={masjid}
     alt="Hero"
     className="w-full h-full object-cover"
   />

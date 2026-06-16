@@ -1,48 +1,97 @@
 import React, { useEffect, useState } from 'react';
-import { Sun, Moon, Clock, Bell } from 'lucide-react';
 import { motion } from 'framer-motion';
-import jadwalData1 from '../data/01.json';
-import jadwalData2 from '../data/02.json';
-import bgImage from '../assets/ornamen/75290.jpg';
+import axios from 'axios';
 
 const JadwalSholat = () => {
   const [jadwalHariIni, setJadwalHariIni] = useState(null);
 
   useEffect(() => {
-    const today = new Date().toISOString().split('T')[0];
-    const allJadwal = [...jadwalData1, ...jadwalData2];
-    const dataHariIni = allJadwal.find(item => item.tanggal === today);
-    setJadwalHariIni(dataHariIni || null);
+    const ambilJadwal = async () => {
+      try {
+        const res = await axios.get(
+          "https://api.aladhan.com/v1/timingsByCity",
+          {
+            params: {
+              city: "Bekasi",
+              country: "Indonesia",
+              method: 11
+            }
+          }
+        );
+
+        const data = res.data.data;
+
+        setJadwalHariIni({
+          hari: data.date.gregorian.weekday.en,
+          tanggal_lengkap: data.date.gregorian.date,
+          imsak: data.timings.Imsak,
+          subuh: data.timings.Fajr,
+          terbit: data.timings.Sunrise,
+          dzuhur: data.timings.Dhuhr,
+          ashar: data.timings.Asr,
+          maghrib: data.timings.Maghrib,
+          isya: data.timings.Isha,
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    ambilJadwal();
   }, []);
 
+  const items = [
+    { label: "Imsak", value: jadwalHariIni?.imsak, icon: "/public/icon/night.png", size: "w-8 h-8" },
+    { label: "Subuh", value: jadwalHariIni?.subuh, icon: "/public/icon/moonset.png", size: "w-10 h-10" },
+    { label: "Terbit", value: jadwalHariIni?.terbit, icon: "/public/icon/sunrise.png", size: "w-10 h-10" },
+    { label: "Dzuhur", value: jadwalHariIni?.dzuhur, icon: "/public/icon/sun.png", size: "w-10 h-10" },
+    { label: "Ashar", value: jadwalHariIni?.ashar, icon: "/public/icon/sunset.png", size: "w-10 h-10" },
+    { label: "Maghrib", value: jadwalHariIni?.maghrib, icon: "/public/icon/moon.png", size: "w-10 h-10" },
+    { label: "Isya", value: jadwalHariIni?.isya, icon: "/public/icon/moon (1).png", size: "w-9 h-9" },
+  ];
+
   return (
-    <div
-      className="flex items-center justify-center min-h-screen bg-cover bg-center p-4"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-50 p-4 overflow-hidden">
+      {/* Ornamen */}
+      <img
+        className="absolute top-0 left-0 h-3/5 opacity-40 pointer-events-none"
+        src="/ornamen/bunga2q.png"
+        alt=""
+      />
+      <img
+        className="absolute bottom-0 right-0 h-3/5 opacity-40 pointer-events-none"
+        src="/ornamen/bunga2.png"
+        alt=""
+      />
+
       {jadwalHariIni ? (
         <motion.div
-          className="bg-white p-10 rounded-2xl shadow-xl border w-[500px]"
+          className="relative z-10 bg-white p-10 rounded-2xl shadow-xl border w-[500px]"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl text-gray-900 font-bold text-center mb-6 flex items-center justify-center gap-2">
-            <Bell className="text-orange-600" /> Jadwal Sholat {jadwalHariIni.tanggal}
+          <h1 className="text-2xl text-gray-900 font-bold text-center mb-6">
+            Jadwal Sholat Hari Ini
           </h1>
+
+          <p className="text-center text-gray-500 mb-6">
+            {jadwalHariIni.hari}, {jadwalHariIni.tanggal_lengkap}
+          </p>
+
           <ul className="space-y-4 text-gray-800 text-lg">
-            <li className="flex items-center gap-3"><Moon className="text-blue-600" /> <strong>Imsyak:</strong> {jadwalHariIni.imsyak}</li>
-            <li className="flex items-center gap-3"><Sun className="text-yellow-500" /> <strong>Shubuh:</strong> {jadwalHariIni.shubuh}</li>
-            <li className="flex items-center gap-3"><Clock className="text-orange-500" /> <strong>Terbit:</strong> {jadwalHariIni.terbit}</li>
-            <li className="flex items-center gap-3"><Sun className="text-yellow-400" /> <strong>Dhuha:</strong> {jadwalHariIni.dhuha}</li>
-            <li className="flex items-center gap-3"><Clock className="text-blue-700" /> <strong>Dzuhur:</strong> {jadwalHariIni.dzuhur}</li>
-            <li className="flex items-center gap-3"><Clock className="text-green-600" /> <strong>Ashar:</strong> {jadwalHariIni.ashr}</li>
-            <li className="flex items-center gap-3"><Moon className="text-red-600" /> <strong>Maghrib:</strong> {jadwalHariIni.magrib}</li>
-            <li className="flex items-center gap-3"><Moon className="text-indigo-700" /> <strong>Isya:</strong> {jadwalHariIni.isya}</li>
+            {items.map((item) => (
+              <li key={item.label} className="flex items-center gap-3">
+                <img src={item.icon} alt={item.label} className={item.size} />
+                <strong>{item.label}:</strong> {item.value}
+              </li>
+            ))}
           </ul>
         </motion.div>
       ) : (
-        <p className="text-gray-600 text-lg">Jadwal sholat untuk hari ini tidak ditemukan.</p>
+        <p className="relative z-10 text-gray-600 text-lg">
+          Memuat jadwal sholat...
+        </p>
       )}
     </div>
   );

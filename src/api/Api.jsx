@@ -2,7 +2,16 @@ import axios from 'axios';
 
 const API_BASE_URL = 'https://bimasislam.kemenag.go.id/apiv1';
 const API_TOKEN = 'af7c667b9819378c0bddb3baede9525b';
-
+const res = await axios.get(
+  "/api-aladhan/v1/timingsByCity",
+  {
+    params: {
+      city: "Bekasi",
+      country: "Indonesia",
+      method: 11
+    }
+  }
+);
 const fetchData = async (url, method = 'GET', params = {}) => {
   try {
     const config = {
