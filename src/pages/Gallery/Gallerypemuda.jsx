@@ -27,7 +27,7 @@ const GalleryPemuda = () => {
             </svg>
             Kembali
           </button>
-          <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 font-[merriweather]">Ramadhan</h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 font-[merriweather]">Pemuda</h1>
           <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded-full"></div>
           <p className="text-gray-400 mt-2 text-sm">{photos.length} foto</p>
         </div>
@@ -42,7 +42,7 @@ const GalleryPemuda = () => {
             >
               <img
                 src={src}
-                alt={`Ramadhan ${i + 1}`}
+                alt={`Pemuda ${i + 1}`}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
