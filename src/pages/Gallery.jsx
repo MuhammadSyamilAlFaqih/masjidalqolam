@@ -1,33 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
 
 const years = [
-  { label: "Kajian", path: "kajian", icon: "", img: "/gallery/kajian.jpeg" },
-  { label: "Jumat Berkah", path: "jumat-berkah", icon: "", img: "/gallery/jumber.jpeg" },
-  { label: "Ramadhan", path: "ramadhan", icon: "", img: "/gallery/ramadan.jpeg" },
-  { label: "Sosial", path: "sosial", icon: "", img: "/gallery/WNA08327.JPG" },
-  { label: "Hari Besar Islam", path: "hari-besar", icon: "", img: "/gallery/ied.JPG" },
-  { label: "Kegiatan Pemuda", path: "pemuda", icon: "", img: "/gallery/remaja.jpeg" },
+  { label: "Kajian", path: "kajian", img: "/gallery/kajian.jpeg" },
+  { label: "Jumat Berkah", path: "jumat-berkah", img: "/gallery/jumber.jpeg" },
+  { label: "Ramadhan", path: "ramadhan", img: "/gallery/ramadan.jpeg" },
+  { label: "Sosial", path: "sosial", img: "/gallery/WNA08327.JPG" },
+  { label: "Hari Besar Islam", path: "hari-besar", img: "/gallery/ied.JPG" },
+  { label: "Kegiatan Pemuda", path: "pemuda", img: "/gallery/remaja.jpeg" },
 ];
-const [selectedImage, setSelectedImage] = useState(null);
+
 const Gallery = () => {
   return (
     <div className="relative flex flex-col min-h-screen bg-white overflow-hidden">
+      <img className="absolute top-0 left-0 h-40 md:h-3/5 opacity-40 pointer-events-none" src="/ornamen/bunga2q.png" alt="" />
+      <img className="absolute bottom-0 right-0 h-40 md:h-3/5 opacity-40 pointer-events-none" src="/ornamen/bunga2.png" alt="" />
 
-      {/* Ornamen */}
-      <img
-        className="absolute top-0 left-0 h-40 md:h-3/5 opacity-40 pointer-events-none"
-        src="/ornamen/bunga2q.png"
-        alt=""
-      />
-      <img
-        className="absolute bottom-0 right-0 h-40 md:h-3/5 opacity-40 pointer-events-none"
-        src="/ornamen/bunga2.png"
-        alt=""
-      />
-
-      {/* Judul */}
       <div className="relative text-center pt-28 md:pt-32 mb-8 md:mb-10 px-4">
         <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 font-[merriweather]">
           Galeri Kegiatan
@@ -38,65 +26,25 @@ const Gallery = () => {
         </p>
       </div>
 
-      {/* Grid Card */}
       <div className="relative grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 px-4 md:px-6 pb-12 md:pb-16 max-w-4xl mx-auto w-full">
         {years.map((item) => (
-<div
-  key={item.label}
-  onClick={() => setSelectedImage(item)}
->
+          <Link key={item.label} to={`/gallery-${item.path}`}>
             <div className="group relative h-32 md:h-56 rounded-xl md:rounded-2xl overflow-hidden shadow-md cursor-pointer">
-
-              {/* Gambar thumbnail */}
               <img
                 src={item.img}
                 alt={item.label}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-
-              {/* Overlay gelap */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300"></div>
-
-              {/* Label */}
               <div className="absolute inset-0 flex items-center justify-center px-2">
                 <span className="text-white text-sm md:text-2xl font-bold tracking-wide drop-shadow-lg text-center">
-                  {item.icon} {item.label}
+                  {item.label}
                 </span>
               </div>
-
             </div>
-            {selectedImage && (
-  <div
-    className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-    onClick={() => setSelectedImage(null)}
-  >
-    <div
-      className="relative max-w-6xl w-full"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        onClick={() => setSelectedImage(null)}
-        className="absolute -top-12 right-0 text-white text-4xl"
-      >
-        ×
-      </button>
-
-      <img
-        src={selectedImage.img}
-        alt={selectedImage.label}
-        className="w-full max-h-[85vh] object-contain rounded-xl"
-      />
-
-      <h2 className="text-white text-center text-2xl font-bold mt-4">
-        {selectedImage.label}
-      </h2>
-    </div>
-  </div>
-)}
-        </div>
+          </Link>
         ))}
       </div>
-
     </div>
   );
 };
