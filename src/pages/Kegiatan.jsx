@@ -4,37 +4,37 @@ import { Link } from 'react-router-dom';
 const kegiatan = [
   {
     label: "Jumat Berkah",
-    path: "/gallery-resq",
+    path: "/gallery",
     img: "/icon/restaurant.png",
     desc: "Berbagi kebaikan setiap Jumat bersama jamaah dan warga sekitar. #jumatmustahillapar",
   },
   {
     label: "Ramadhan",
-    path: "/gallery-2019",
+    path: "/gallery",
     img: "/icon/ketupat.png",
     desc: "Rangkaian ibadah dan kegiatan spesial sepanjang bulan suci.",
   },
   {
     label: "Kajian Subuh",
-    path: "/gallery-2022",
+    path: "/gallery",
     img: "/icon/conference.png",
     desc: "Menimba ilmu di hari sabtu dan minggu pagi dengan tema-tema yang komprehensif.",
   },
   {
     label: "Kajian Kemuslimahan",
-    path: "/gallery-2023",
+    path: "/gallery",
     img: "/icon/muslim.png",
     desc: "Ruang belajar dan berbagi khusus untuk muslimah.",
   },
   {
     label: "Masjid Berbagi",
-    path: "/gallery-2024",
+    path: "/gallery",
     img: "/icon/charity.png",
     desc: "Program berbagi dan pembinaan sosial untuk masyarakat sekitar.",
   },
   {
     label: "Kemerdekaan",
-    path: "/gallery-2025",
+    path: "/gallery",
     img: "/icon/indonesia.png",
     desc: "Merayakan HUT RI dengan semangat kebersamaan dan pancasila.",
   },
