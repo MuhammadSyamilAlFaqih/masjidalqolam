@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const heroPhotos = [
-  "/masjid.JPG", "/masjid2.JPG", "/masjid3.JPG", "/masjid4.JPG", "/masjid5.JPG",
-  "/masjid6.JPG", "/masjid7.JPG", "/masjid8.JPG", "/masjid9.JPG", "/masjid10.JPG",
-  "/masjid11.JPG", "/masjid12.JPG", "/masjid13.JPG", "/masjid14.JPG", "/masjid15.JPG",
-  "/masjid16.JPG", "/masjid17.JPG", "/masjid18.JPG", "/masjid19.JPG",
+  "/iqro/masjid.JPG", "/iqro/masjid2.JPG", "/iqro/masjid3.JPG", "/iqro/masjid4.JPG", "/iqro/masjid5.JPG",
+  "/iqro/masjid6.JPG", "/iqro/masjid7.JPG", "/iqro/masjid8.JPG", "/iqro/masjid9.JPG", "/iqro/masjid10.JPG",
+  "/iqro/masjid11.JPG", "/iqro/masjid12.JPG", "/iqro/masjid13.JPG", "/iqro/masjid14.JPG", "/iqro/masjid15.JPG",
+  "/iqro/masjid16.JPG", "/iqro/masjid17.JPG", "/iqro/masjid18.JPG", "/iqro/masjid19.JPG",
 ];
 
 const Homepage = () => {
@@ -26,11 +26,10 @@ const Homepage = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.volume = 0.4; // volume awal, jangan terlalu keras
+    audio.volume = 0.4;
     audio.play()
       .then(() => setIsPlaying(true))
       .catch(() => {
-        // Browser blokir autoplay → tampilkan tombol manual
         setNeedsInteraction(true);
       });
   }, []);
@@ -87,13 +86,11 @@ const Homepage = () => {
         className="absolute top-6 right-6 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white rounded-full p-3 transition-all duration-300 flex items-center gap-2"
       >
         {isPlaying ? (
-          // Icon pause
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
             <rect x="6" y="5" width="4" height="14" rx="1" />
             <rect x="14" y="5" width="4" height="14" rx="1" />
           </svg>
         ) : (
-          // Icon play
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z" />
           </svg>
@@ -102,19 +99,6 @@ const Homepage = () => {
           <span className="text-sm pr-1 animate-pulse">Putar Musik</span>
         )}
       </button>
-
-      {/* Indikator titik slideshow */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 flex-wrap justify-center max-w-[90%]">
-        {heroPhotos.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === current ? 'w-6 bg-white' : 'w-2 bg-white/50'
-            }`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
