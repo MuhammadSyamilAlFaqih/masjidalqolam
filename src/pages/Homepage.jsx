@@ -1,55 +1,81 @@
-import React from 'react';
-import masjid from "../../public/masjid.jpg"
-import JadwalSholat from './Jadwal';
+import React, { useState, useEffect } from 'react';
+
+// =============================================
+// FOTO HERO — pastikan semua file ada di folder public/
+// =============================================
+const heroPhotos = [
+  "/masjid.JPG",
+  "/masjid2.JPG",
+  "/masjid3.JPG",
+  "/masjid4.JPG",
+  "/masjid5.JPG",
+  "/masjid6.JPG",
+  "/masjid7.JPG",
+  "/masjid8.JPG",
+  "/masjid9.JPG",
+  "/masjid10.JPG",
+  "/masjid11.JPG",
+  "/masjid12.JPG",
+  "/masjid13.JPG",
+  "/masjid14.JPG",
+  "/masjid15.JPG",
+  "/masjid16.JPG",
+  "/masjid17.JPG",
+  "/masjid18.JPG",
+  "/masjid19.JPG",
+];
+
 const Homepage = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroPhotos.length);
+    }, 3000); // ganti tiap 3 detik
+
+    return () => clearInterval(interval); // bersihkan interval saat unmount
+  }, []);
+
   return (
-    
- 
+    <div className="relative h-screen overflow-hidden">
+      {/* Render semua foto, hanya yang aktif yang terlihat (fade transition) */}
+      {heroPhotos.map((photo, i) => (
+        <img
+          key={photo}
+          src={photo}
+          alt="Hero"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            i === current ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      ))}
 
-    <div className="relative h-screen">
-  <img
-    src={masjid}
-    alt="Hero"
-    className="w-full h-full object-cover"
-  />
+      <div className="absolute inset-0 bg-black/50"></div>
 
-  <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+        <h1 className="text-5xl font-bold mb-4">
+          Masjid Al Qolam
+        </h1>
+        <p className="text-xl max-w-2xl">
+          Rumah singgah jiwa yang rindu ketenangan,
+          terbuka untuk semua, setiap saat.
+        </p>
+      </div>
 
-<div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-  <h1 className="text-5xl font-bold mb-4">
-    Masjid Al Qolam
-  </h1>
-  <p className="text-xl max-w-2xl">
-    Rumah singgah jiwa yang rindu ketenangan, 
-    terbuka untuk semua, setiap saat.
-  </p>
-</div>
-</div>
-
-  
+      {/* Indikator titik (opsional) */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 flex-wrap justify-center max-w-[90%]">
+        {heroPhotos.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === current ? 'w-6 bg-white' : 'w-2 bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
   );
-  <section className="py-16">
-  <h2 className="text-4xl font-bold text-center mb-8">
-    Galeri Kegiatan
-  </h2>
-
-  <div className="grid md:grid-cols-4 gap-4">
-    {photos.map((photo) => (
-      <img
-        src={photo}
-        className="
-          h-64
-          w-full
-          object-cover
-          rounded-xl
-          transition
-          duration-300
-          hover:scale-105
-        "
-      />
-    ))}
-  </div>
-</section>
 };
 
 export default Homepage;
