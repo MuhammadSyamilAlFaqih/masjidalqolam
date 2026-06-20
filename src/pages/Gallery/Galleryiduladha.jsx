@@ -15,7 +15,7 @@ const photos = [
   "/gallery/iduladha/010.JPG",
 ];
 
-const GalleryEvent = () => {
+const GalleryIdulAdha = () => {
   const navigate = useNavigate();
   const [lightbox, setLightbox] = useState(null);
 
@@ -94,4 +94,4 @@ const GalleryEvent = () => {
   );
 };
 
-export default GalleryEvent;
+export default GalleryIdulAdha;
