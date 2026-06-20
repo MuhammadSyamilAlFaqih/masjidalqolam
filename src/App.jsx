@@ -35,7 +35,7 @@ const App = () => {
       <Route path='/gallery-ramadhan' element={<GalleryRamadhan />}></Route>
       <Route path='/gallery-jumat-berkah' element={<GalleryJumber />}></Route>
       <Route path='/gallery-sosial' element={<GallerySosial />}></Route>
-      <Route path='/gallery-hari-iduladha' element={<GalleryIdulAdha />}></Route>
+      <Route path='/gallery-iduladha' element={<GalleryIdulAdha />}></Route>
       <Route path='/gallery-pemuda' element={<GalleryPemuda />}></Route>
     
       </Routes>
