@@ -1,19 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html{
+  html {
     font-family: "Poppins", sans-serif;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 .text-shadow-strong {
   text-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
 }
 
-
 body {
-  @apply bg-[#E1D6C5] text-[#5A3E36]; 
+  @apply bg-[#E1D6C5] text-[#5A3E36];
 }
