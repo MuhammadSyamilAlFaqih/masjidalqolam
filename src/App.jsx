@@ -12,7 +12,7 @@ import GalleryRamadhan from './pages/Gallery/Galleryramadhan';
 import GalleryJumber from './pages/Gallery/Galleryjumber';
 import GallerySosial from './pages/Gallery/Gallerysosial';
 import GalleryPemuda from './pages/Gallery/Gallerypemuda';
-import GalleryEvent from './pages/Gallery/Galleryevent';
+import GalleryEvent from './pages/Gallery/Galleryiduladha';
 import GalleryKajian from './pages/Gallery/Gallerykajian';
 import Sejarah from './pages/Sejarah';
 
@@ -35,7 +35,7 @@ const App = () => {
       <Route path='/gallery-ramadhan' element={<GalleryRamadhan />}></Route>
       <Route path='/gallery-jumat-berkah' element={<GalleryJumber />}></Route>
       <Route path='/gallery-sosial' element={<GallerySosial />}></Route>
-      <Route path='/gallery-hari-besar' element={<GalleryEvent />}></Route>
+      <Route path='/gallery-iduladha' element={<GalleryEvent />}></Route>
       <Route path='/gallery-pemuda' element={<GalleryPemuda />}></Route>
     
       </Routes>
