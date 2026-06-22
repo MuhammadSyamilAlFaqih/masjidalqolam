@@ -54,7 +54,7 @@ const Homepage = () => {
         />
       ))}
 
-<div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]"></div>
+<div className="absolute inset-0 "></div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
