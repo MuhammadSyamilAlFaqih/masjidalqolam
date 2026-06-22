@@ -2,7 +2,26 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const photos = [
-  "/gallery/remaja.jpeg",
+"/gallery/pemuda/018.jpg",
+"/gallery/pemuda/001.jpg",
+"/gallery/pemuda/002.jpg",
+"/gallery/pemuda/003.jpg",
+"/gallery/pemuda/004.jpg",
+"/gallery/pemuda/005.jpg",
+"/gallery/pemuda/006.jpg",
+"/gallery/pemuda/007.jpg",
+"/gallery/pemuda/008.jpg",
+"/gallery/pemuda/009.jpg",
+"/gallery/pemuda/010.jpg",
+"/gallery/pemuda/011.jpg",
+"/gallery/pemuda/012.jpg",
+"/gallery/pemuda/013.jpg",
+"/gallery/pemuda/014.jpg",
+"/gallery/pemuda/015.jpg",
+"/gallery/pemuda/016.jpg",
+"/gallery/pemuda/017.jpg",
+
+
 ];
 
 const GalleryPemuda = () => {

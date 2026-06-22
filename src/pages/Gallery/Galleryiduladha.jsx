@@ -10,7 +10,7 @@ const photos = [
   "/gallery/iduladha/005.JPG",
   "/gallery/iduladha/006.JPG",
   "/gallery/iduladha/007.JPG",
-  "/gallery/iduladha/009.JPG",
+  "/gallery/iduladha/008.JPG",
   "/gallery/iduladha/009.JPG",
   "/gallery/iduladha/010.JPG",
 ];
