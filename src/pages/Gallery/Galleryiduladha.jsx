@@ -13,6 +13,8 @@ const photos = [
   "/gallery/iduladha/008.JPG",
   "/gallery/iduladha/009.JPG",
   "/gallery/iduladha/010.JPG",
+  "/gallery/iduladha/011.JPG",
+  "/gallery/iduladha/012.JPG",
 ];
 
 const GalleryIdulAdha = () => {
