@@ -2,10 +2,10 @@ import React from 'react';
 
 const About = () => {
   const kegiatan = [
-    { img: "/resqew.png", title: "Idul Fitri" },
-    { img: "/cwe.jpg", title: "Halal bi Halal" },
-    { img: "/rpatt.jpeg", title: "Rapat" },
-    { img: "/rihlah.jpeg", title: "Rihlah" },
+    { img: "/about/resqew.png", title: "Idul Fitri" },
+    { img: "/about/cwe.jpg", title: "Halal bi Halal" },
+    { img: "/about/rpatt.jpeg", title: "Rapat" },
+    { img: "/about/rihlah.jpeg", title: "Rihlah" },
   ];
 
   return (
