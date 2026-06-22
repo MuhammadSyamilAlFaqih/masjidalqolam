@@ -43,6 +43,7 @@ const GallerySosial = () => {
               <img
                 src={src}
                 alt={`Sosial ${i + 1}`}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
