@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const photos = [
-"/gallery/pemuda/018.jpg",
-"/gallery/pemuda/001.jpg",
+
+"/gallery/pemuda/018.jpeg",
 "/gallery/pemuda/002.jpg",
 "/gallery/pemuda/003.jpg",
 "/gallery/pemuda/004.jpg",
@@ -20,6 +20,8 @@ const photos = [
 "/gallery/pemuda/015.jpg",
 "/gallery/pemuda/016.jpg",
 "/gallery/pemuda/017.jpg",
+"/gallery/pemuda/001.jpg",
+
 
 
 ];
