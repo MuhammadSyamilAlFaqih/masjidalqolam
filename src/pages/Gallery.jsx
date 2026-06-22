@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const years = [
   { label: "Kajian", path: "kajian", img: "/gallery/kajian.jpeg" },
   { label: "Jumat Berkah", path: "jumat-berkah", img: "/gallery/jumber.jpeg" },
-  { label: "Ramadhan", path: "ramadhan", img: "/gallery/ramadan.jpeg" },
+  { label: "Ramadhan", path: "ramadhan", img: "/gallery/ramadhan/019.jpg" },
   { label: "Sosial", path: "sosial", img: "/gallery/WNA08327.JPG" },
   { label: "Idul Adha", path: "iduladha", img: "/gallery/iduladha/005.JPG" },
   { label: "Kegiatan Pemuda", path: "pemuda", img:   "/gallery/pemuda/018.jpeg", },

@@ -2,7 +2,28 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const photos = [
-  "/gallery/ramadan.jpeg",
+"/gallery/ramadhan/019.jpg",
+"/gallery/ramadhan/002.jpg",
+"/gallery/ramadhan/003.jpg",
+"/gallery/ramadhan/004.jpg",
+"/gallery/ramadhan/005.jpg",
+"/gallery/ramadhan/006.jpg",
+"/gallery/ramadhan/007.jpg",
+"/gallery/ramadhan/008.jpg",
+"/gallery/ramadhan/009.jpg",
+"/gallery/ramadhan/010.jpg",
+"/gallery/ramadhan/011.jpg",
+"/gallery/ramadhan/012.jpg",
+"/gallery/ramadhan/013.jpg",
+"/gallery/ramadhan/014.jpg",
+"/gallery/ramadhan/015.jpg",
+"/gallery/ramadhan/016.jpg",
+"/gallery/ramadhan/017.jpg",
+"/gallery/ramadhan/001.jpg",
+"/gallery/ramadhan/018.jpg",
+"/gallery/ramadhan/020.jpg",
+"/gallery/ramadhan/021.jpg",
+"/gallery/ramadhan/022.jpg",
 ];
 
 const GalleryRamadhan = () => {
