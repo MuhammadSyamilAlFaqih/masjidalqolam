@@ -2,20 +2,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const photos = [
-  "/gallery/iduladha/001.JPG",
-  "/gallery/iduladha/002.JPG",
-  "/gallery/iduladha/003.JPG",
-  "/gallery/iduladha/004.JPG",
-  "/gallery/iduladha/005.JPG",
-  "/gallery/iduladha/006.JPG",
-  "/gallery/iduladha/007.JPG",
-  "/gallery/iduladha/008.JPG",
-  "/gallery/iduladha/009.JPG",
-  "/gallery/iduladha/010.JPG",
-  "/gallery/iduladha/011.JPG",
-  "/gallery/iduladha/012.JPG",
-];
+const photos = Array.from({ length: 12 }, (_, i) =>
+  `https://res.cloudinary.com/dsm3bygd8/image/upload/f_auto,q_auto,w_1600/iduladha/${String(i + 1).padStart(3, "0")}`
+);
 
 const GalleryIdulAdha = () => {
   const navigate = useNavigate();
