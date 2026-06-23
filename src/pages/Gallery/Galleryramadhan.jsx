@@ -10,14 +10,13 @@ const photos = [
 "/gallery/ramadhan/006.jpg",
 "/gallery/ramadhan/007.jpg",
 "/gallery/ramadhan/008.jpg",
-"/gallery/ramadhan/009.jpg",
 "/gallery/ramadhan/010.jpg",
 "/gallery/ramadhan/011.jpg",
 "/gallery/ramadhan/012.jpg",
 "/gallery/ramadhan/013.jpg",
 "/gallery/ramadhan/014.jpg",
-"/gallery/ramadhan/015.jpg",
-"/gallery/ramadhan/016.jpg",
+"/gallery/ramadhan/015.jpeg",
+"/gallery/ramadhan/016.jpeg",
 
 
 ];
