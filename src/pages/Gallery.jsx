@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const years = [
   { label: "Kajian", path: "kajian", img: "/gallery/kajian.jpeg" },
   { label: "Jumat Berkah", path: "jumat-berkah", img: "/gallery/jumber.jpeg" },
-  { label: "Ramadhan", path: "ramadhan", img: "/gallery/ramadhan/001.jpg" },
+  { label: "Ramadhan", path: "ramadhan", img: "https://res.cloudinary.com/dsm3bygd8/image/upload/v1782178560/ramadhan/001.jpg" },
   { label: "Sosial", path: "sosial", img: "/gallery/WNA08327.JPG" },
   { label: "Idul Adha", path: "iduladha", img: "https://res.cloudinary.com/dsm3bygd8/image/upload/v1782178057/iduladha/005.jpg" },
-  { label: "Kegiatan Pemuda", path: "pemuda", img:   "/gallery/pemuda/018.jpeg", },
+  { label: "Kegiatan Pemuda", path: "pemuda", img:   "https://res.cloudinary.com/dsm3bygd8/image/upload/v1782178620/pemuda/018.jpg", },
 ];
 
 const Gallery = () => {
