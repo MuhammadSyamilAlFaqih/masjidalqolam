@@ -6,7 +6,7 @@ const years = [
   { label: "Jumat Berkah", path: "jumat-berkah", img: "/gallery/jumber.jpeg" },
   { label: "Ramadhan", path: "ramadhan", img: "/gallery/ramadhan/001.jpg" },
   { label: "Sosial", path: "sosial", img: "/gallery/WNA08327.JPG" },
-  { label: "Idul Adha", path: "iduladha", img: "/gallery/iduladha/005.JPG" },
+  { label: "Idul Adha", path: "iduladha", img: "https://res.cloudinary.com/dsm3bygd8/image/upload/v1782178057/iduladha/005.jpg" },
   { label: "Kegiatan Pemuda", path: "pemuda", img:   "/gallery/pemuda/018.jpeg", },
 ];
 
