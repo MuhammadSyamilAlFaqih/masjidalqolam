@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const heroPhotos = Array.from({ length: 19 }, (_, i) =>
-  `https://res.cloudinary.com/dsm3bygd8/image/upload/f_auto,q_auto:best,w_2400,c_fill/iqro/${String(i + 1).padStart(3, "0")}`
-);
+const heroPhotos = [
+  "/iqro/masjid.JPG", "/iqro/masjid2.JPG", "/iqro/masjid3.JPG", "/iqro/masjid4.JPG", "/iqro/masjid5.JPG",
+  "/iqro/masjid6.JPG", "/iqro/masjid7.JPG", "/iqro/masjid8.JPG", "/iqro/masjid9.JPG", "/iqro/masjid10.JPG",
+  "/iqro/masjid11.JPG", "/iqro/masjid12.JPG", "/iqro/masjid13.JPG", "/iqro/masjid14.JPG", "/iqro/masjid15.JPG",
+  "/iqro/masjid16.JPG", "/iqro/masjid17.JPG", "/iqro/masjid18.JPG", "/iqro/masjid19.JPG",
+];
 
 const Homepage = () => {
   const [current, setCurrent] = useState(0);
