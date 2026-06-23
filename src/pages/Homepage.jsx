@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const heroPhotos = Array.from({ length: 19 }, (_, i) =>
-  `https://res.cloudinary.com/dsm3bygd8/image/upload/f_auto,q_auto,w_1600/iqro/${String(i + 1).padStart(3, "0")}`
+  `https://res.cloudinary.com/dsm3bygd8/image/upload/f_auto,q_auto:best,w_2400,c_fill/iqro/${String(i + 1).padStart(3, "0")}`
 );
 
 const Homepage = () => {
