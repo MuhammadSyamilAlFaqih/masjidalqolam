@@ -20,10 +20,10 @@ const photos = [
 "/gallery/ramadhan/016.jpg",
 "/gallery/ramadhan/017.jpg",
 "/gallery/ramadhan/018.jpg",
-"/gallery/ramadhan/019.jpg",
-"/gallery/ramadhan/020.jpg",
-"/gallery/ramadhan/024.jpg",
-"/gallery/ramadhan/025.jpg",
+"/gallery/ramadhan/019.jpeg",
+"/gallery/ramadhan/020.jpeg",
+"/gallery/ramadhan/021.jpeg",
+
 ];
 
 const GalleryRamadhan = () => {
