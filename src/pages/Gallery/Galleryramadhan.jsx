@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const photos = [
-"/gallery/ramadhan/019.jpg",
+"/gallery/ramadhan/001.jpg",
 "/gallery/ramadhan/002.jpg",
 "/gallery/ramadhan/003.jpg",
 "/gallery/ramadhan/004.jpg",
@@ -19,11 +19,11 @@ const photos = [
 "/gallery/ramadhan/015.jpg",
 "/gallery/ramadhan/016.jpg",
 "/gallery/ramadhan/017.jpg",
-"/gallery/ramadhan/001.jpg",
 "/gallery/ramadhan/018.jpg",
+"/gallery/ramadhan/019.jpg",
 "/gallery/ramadhan/020.jpg",
-"/gallery/ramadhan/021.jpg",
-"/gallery/ramadhan/022.jpg",
+"/gallery/ramadhan/024.jpg",
+"/gallery/ramadhan/025.jpg",
 ];
 
 const GalleryRamadhan = () => {
