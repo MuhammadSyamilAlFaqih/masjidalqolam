@@ -73,7 +73,7 @@ const Footer = () => {
             "
           >
             <img
-              src="/logo/logo.png"
+              src="/logo/prayer.png"
               alt="Logo Masjid"
               className="w-20 md:w-28"
             />
