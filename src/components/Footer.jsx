@@ -3,16 +3,15 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-    <section className="bg-gray-100 py-16">
-  <div className="max-w-5xl mx-auto px-6">
+  <section className="bg-gray-100 py-12 md:py-20">
+  <div className="max-w-5xl mx-auto px-5">
 
-    <h2 className="text-3xl md:text-4xl font-bold text-center text-red-950 mb-3">
+    <h2 className="text-2xl md:text-4xl font-bold text-center text-red-950">
       Kunjungi Kami
     </h2>
 
-    <p className="text-center text-gray-600 mb-10">
-      Masjid Al Qolam terbuka untuk seluruh jamaah.
-      Klik kartu di bawah untuk membuka lokasi di Google Maps.
+    <p className="text-sm md:text-base text-center text-gray-600 mt-3 mb-10">
+      Klik kartu di bawah untuk membuka lokasi Masjid Al Qolam di Google Maps.
     </p>
 
     <a
@@ -23,32 +22,34 @@ const Footer = () => {
     >
       <div
         className="
-        bg-white
-        rounded-3xl
-        shadow-lg
-        p-8
-        transition-all
-        duration-300
-        hover:shadow-2xl
-        hover:-translate-y-2
-        border
-        border-gray-200
-      "
+          bg-white
+          rounded-3xl
+          shadow-lg
+          border
+          border-gray-200
+          p-6
+          md:p-8
+          transition-all
+          duration-300
+          hover:-translate-y-2
+          hover:shadow-2xl
+        "
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
-          <div>
+          {/* Informasi */}
+          <div className="text-center md:text-left">
             <div className="text-5xl mb-4">📍</div>
 
-            <h3 className="text-2xl font-bold text-red-950">
+            <h3 className="text-2xl md:text-3xl font-bold text-red-950">
               Masjid Al Qolam
             </h3>
 
-            <p className="text-gray-600 mt-3">
+            <p className="text-gray-600 mt-2">
               Islamic Centre IQRO
             </p>
 
-            <p className="text-gray-500 mt-1">
+            <p className="text-gray-500">
               Bekasi Timur, Jawa Barat
             </p>
 
@@ -57,23 +58,24 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Logo */}
           <div
             className="
-            w-44
-            h-44
-            rounded-2xl
-            bg-red-50
-            flex
-            items-center
-            justify-center
-            group-hover:scale-105
-            transition
-          "
+              w-32 h-32
+              md:w-44 md:h-44
+              rounded-2xl
+              bg-red-50
+              flex
+              items-center
+              justify-center
+              transition
+              group-hover:scale-105
+            "
           >
             <img
-              src="/logo.png"
+              src="/logo/logo.png"
               alt="Logo Masjid"
-              className="w-28"
+              className="w-20 md:w-28"
             />
           </div>
 
